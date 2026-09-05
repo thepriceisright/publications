@@ -1,0 +1,19 @@
+Build completed successfully (8898 jobs).
+<publications>/erdos/304/Lower1950.lean:36:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+<publications>/erdos/304/Lower1950.lean:197:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+<publications>/erdos/304/Lower1950.lean:293:8: warning: The namespaces `erdos_304` and `variants` are duplicated in the declaration `erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+'erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Both patched files and the zero-dimensional regression built successfully.
+The repaired 769 growth-rate conjecture remains unproved.

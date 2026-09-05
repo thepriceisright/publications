@@ -1,3 +1,5 @@
 Lean source files and statement excerpts derive from Google DeepMind Formal Conjectures at commit 8323e878b83fcd7f4a448256069352a265460d75, copyright The Formal Conjectures Authors, licensed under Apache-2.0. Original file notices are retained.
 
-The Erdős 867 proof was generated with Harmonic Aristotle and adapted for an inline contribution. The Erdős 769 boundary refutation was generated with GLM 5.3 Flash; its no-cutoff lemma supplies the regression here. The positive-dimension edit, packaging and validation scripts were prepared with AI assistance under Keith Vertrees' direction. No human mathematical review or new open-problem solution is claimed.
+The Erdős 304 and 867 proofs were generated with Harmonic Aristotle and adapted for an inline contribution. The Erdős 769 boundary refutation was generated with GLM 5.3 Flash; its no-cutoff lemma supplies the regression here. The positive-dimension edit, packaging and validation scripts were prepared with AI assistance under Keith Vertrees' direction. No human mathematical review or new open-problem solution is claimed.
+
+The Erdős 304 proof is preserved byte for byte from the artifact originally linked in PR #5237. Its original provenance header is retained. Its imported 304 source file is unchanged between the historical d1401976e8c59c6341cd0eceb425d5180092e176 pin and the new verification pin above.

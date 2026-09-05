@@ -50,11 +50,17 @@ def main():
     if target.exists() and sha(source) != sha(target):
         raise ValueError('Refusing to replace a different regression file')
     shutil.copyfile(source, target)
+    for relative, expected in evidence.get('imported_sources', {}).items():
+        if sha(checkout / relative) != expected:
+            raise ValueError('Imported upstream source differs: ' + relative)
     if not args.skip_cache:
         subprocess.run(['lake', 'exe', 'cache', 'get'], cwd=checkout, check=True)
     subprocess.run(['lake', '--wfail', 'build', 'FormalConjectures.ErdosProblems.«867»',
                     'FormalConjectures.ErdosProblems.«769»',
-                    'FormalConjectures.ErdosProblems.Regression769'], cwd=checkout, check=True)
+                    'FormalConjectures.ErdosProblems.Regression769',
+                    'FormalConjectures.ErdosProblems.«304»'], cwd=checkout, check=True)
+    subprocess.run(['lake', 'env', 'lean', str(ROOT / 'erdos/304/Lower1950.lean')],
+                   cwd=checkout, check=True)
     print('Both patched files and the zero-dimensional regression built successfully.')
     print('The repaired 769 growth-rate conjecture remains unproved.')
 

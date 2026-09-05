@@ -22,6 +22,7 @@ def main():
     parser.add_argument('--checkout', type=Path, default=ROOT / '.build/formal-conjectures')
     parser.add_argument('--comparator', type=Path, required=True)
     parser.add_argument('--exporter', type=Path, required=True)
+    parser.add_argument('--targets', nargs='+', help='Replay only these problem numbers; default: all')
     args = parser.parse_args()
     checkout = args.checkout.resolve()
     comparator, exporter = args.comparator.resolve(), args.exporter.resolve()
@@ -32,6 +33,12 @@ def main():
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=checkout, text=True).strip()
     if head != evidence['upstream_commit'] or sha(checkout / 'lake-manifest.json') != evidence['dependency_manifest_sha256']:
         raise ValueError('Unexpected upstream revision or dependency manifest')
+    for relative, expected in evidence.get('imported_sources', {}).items():
+        if sha(checkout / relative) != expected:
+            raise ValueError('Imported upstream source differs: ' + relative)
+    selected = args.targets or list(evidence['checks'])
+    if set(selected) - evidence['checks'].keys():
+        raise ValueError('Unknown proof-check target')
     # Binaries differ across platforms. Require their source checkouts at the
     # recorded revisions, and record the locally built executable hashes.
     for binary, revision in [(comparator, evidence['comparator_revision']), (exporter, evidence['exporter_revision'])]:
@@ -54,7 +61,7 @@ def main():
     output = ROOT / '.build/replays'
     output.mkdir(parents=True, exist_ok=True)
     run = Path(tempfile.mkdtemp(prefix='run-', dir=output))
-    for number in ['867', '769']:
+    for number in selected:
         directory = run / number
         directory.mkdir()
         (directory / '.lake').mkdir()

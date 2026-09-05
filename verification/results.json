@@ -5,7 +5,7 @@
   "dependency_manifest_sha256": "c8ffc0d59f492007162fe54c68396e4b9f2f305fcf69210a7fbaf0b18fcd8cd9",
   "comparator_revision": "3927ad383f208ae977c340a91c48ac9b497d2097",
   "exporter_revision": "15f6055e299ad5b89345e533cc2192f4cc00f659",
-  "verification_scope": "867 lower-bound proof and 769 no_cutoff_zero regression; repaired 769 conjecture remains unproved",
+  "verification_scope": "304 and 867 classical lower-bound proofs and 769 no_cutoff_zero regression; repaired 769 conjecture remains unproved",
   "validation_method": "Independent challenge export, exact statement comparison and Lean builtin kernel replay; trusted third-party dependency caches reused; no independent kernel implementation",
   "human_mathematical_review": "not claimed",
   "artifacts": {
@@ -56,14 +56,33 @@
       "comparator_binary_sha256": "7ceecbe6643d85e6e22f97153451d406feadc56bd6c3d725310fabb4789a8d86",
       "exporter_binary_sha256": "935d83081c9c5c2ff04abfb80f323531195b367c6bc42b45b805e50b550ceb33",
       "sandbox_source_sha256": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253"
+    },
+    "304": {
+      "verified": true,
+      "exit_code": 0,
+      "theorem_names": [
+        "erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950"
+      ],
+      "challenge_sha256": "ccfa81393ed8d54f753c6ab9af29e54e13c53c91bffee6c31fbcb2a890ec69d4",
+      "solution_sha256": "3af1b018dd843696fc46893229f9403d70f354f4fbf26273d0b500a5359ac774",
+      "comparator_binary_sha256": "7ceecbe6643d85e6e22f97153451d406feadc56bd6c3d725310fabb4789a8d86",
+      "exporter_binary_sha256": "935d83081c9c5c2ff04abfb80f323531195b367c6bc42b45b805e50b550ceb33",
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "sandbox_source_sha256": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253"
     }
   },
   "files": {
     ".gitattributes": "2453d056ac016dc78128e38ccd41757164b51cc404872e3e7b3bf9ded7c58080",
     ".gitignore": "0a58d0607f6a4bc18ae135e2d18ced14eaef4ea5ef42dc2a81f72169d682c583",
     "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-    "NOTICE": "f788cf0bbc0327c79d071028855758e763b8ed560a7abf45998f9b4e2e950adb",
-    "README.md": "df36bd65257004c50f7cdf35a091e29e67408ec34ac41e9968a8180ecd16d800",
+    "NOTICE": "3a02d3203bb7f3319b83a18e08ee417b9eb9a23a9758b00fa7369aa6b405cb56",
+    "README.md": "32d29a8333d7614e67ee7e99726d517c7b38c8c00c5f8ceff26d819c202836cf",
+    "erdos/304/Lower1950.lean": "3af1b018dd843696fc46893229f9403d70f354f4fbf26273d0b500a5359ac774",
+    "erdos/304/README.md": "ab134ddd7cd52f5232bd46428c0f8c6a9e0ce6713ab6cd83cdeaa1f3b1fa1087",
     "erdos/769/769.lean": "fdf54b0b13b8cc729583d35949f4e31254e0f9dbef4ba95bfeb30ed1f729b2b0",
     "erdos/769/769.patch": "9869ccb0814c954a916b8a7a2cd1f848a61c4f1e7275777b90c7b3bee5cfe562",
     "erdos/769/README.md": "93f2a75caba038ee8bdf877b0fa3eadd87995348acadbf132616826c119e7874",
@@ -71,9 +90,16 @@
     "erdos/867/867.lean": "784f7a77001f1513b0d62986904cda80f4f75325afdcbeaf60fa5101e8eda8d7",
     "erdos/867/867.patch": "70b46b9e8392ee3026771edd789e32d395e45b1c94af37f4c8c8c9aa33eb1fd2",
     "erdos/867/README.md": "ff92e76778c14e326990e587084a25a2612ca487dfe2fe0cc6745a4273d07e5d",
-    "scripts/build.py": "28934b852e75ad20f6c3762534e1956216ccd40db52ddc8e3dee024e6d9c37df",
-    "scripts/replay.py": "14f47132124f5a70d4a44669af693a489f05d507f5d0fb56e3bd626cba6e5ee7",
+    "scripts/build.py": "e43f05fa0127d269cfc3b9bf5edafac3d7980cb94972443ecb10cef9a3a7d4a0",
+    "scripts/replay.py": "8e88ac0409fe3ce20b15394570aa1bb3b153f2d8f6137f8079c3a2d918d95044",
     "scripts/sandbox.py": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253",
+    "verification/304/Challenge.lean": "ccfa81393ed8d54f753c6ab9af29e54e13c53c91bffee6c31fbcb2a890ec69d4",
+    "verification/304/Solution.lean": "3af1b018dd843696fc46893229f9403d70f354f4fbf26273d0b500a5359ac774",
+    "verification/304/Upstream.lean": "62ca2afa631d8c1eeeafd631bb94865baf1210fe6f6019e67ca43d91c671e52c",
+    "verification/304/build.log": "ad96e8c02e9a79d98f8f6f8cf1ae5702fbd880c0f183b20d0b721bedf2b6ec04",
+    "verification/304/config.json": "02d682243db7d29f241ab88a348baa6941a0001f6b9bc046a821a50ceee513ee",
+    "verification/304/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/304/stdout.log": "812c3f8e912c995738177241c90665cb40fafd352b92920dd5bad62528061727",
     "verification/769/Challenge.lean": "a755814d0e13d8cc8d7ea372fd8ba2ed3076b039b35fc0e5670e5b7a6701f2e3",
     "verification/769/Solution.lean": "6c61c6ed2b8a4a1d1046884fc04ea697cc76a90de0ac187d06cd74a739ef3659",
     "verification/769/config.json": "ae3dea155aea10aab1ca67c44c68e8aad339f655b5b42c174aa7b24bd429fff1",
@@ -84,7 +110,7 @@
     "verification/867/config.json": "a3ff9f2917af217f893de9d6839c44d7ac7c0607bb10df83b5ed0dad1f7414a1",
     "verification/867/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "verification/867/stdout.log": "7916aff446fd8a6f710fc23183180c5b9156bf5810ac612e01d6d5ae5e280d30",
-    "verification/README.md": "48d234d40a9798eebff1a07041e727219de683783a1616b472c9cd832d333a4c",
+    "verification/README.md": "c14c475a451cd50cd58fa33d4d8444e9fa46b60ceb7cc23d45e0c29e08759547",
     "verification/comparator-lake-manifest.json": "ea674a67ec934845dd5769ce8744fc27f076fb9b2c3149b0efc005a1feb6d518"
   },
   "comparator_toolchain_override": "leanprover/lean4:v4.33.1",
@@ -95,8 +121,29 @@
     "build_exit_code": 0,
     "public_replay_script_verified_targets": [
       "Erdos867.erdos_867.variants.lower_bound",
-      "PublicationRegression769.no_cutoff_zero"
+      "PublicationRegression769.no_cutoff_zero",
+      "erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950"
     ],
     "cache_policy": "Third-party dependency caches reused; current upstream corpus utility sources rebuilt"
+  },
+  "imported_sources": {
+    "FormalConjectures/ErdosProblems/304.lean": "62ca2afa631d8c1eeeafd631bb94865baf1210fe6f6019e67ca43d91c671e52c"
+  },
+  "migration_304": {
+    "date_utc": "2026-09-05",
+    "upstream_pull_request": "https://github.com/google-deepmind/formal-conjectures/pull/5237",
+    "original_artifact_commit": "69da0052af237ffc3380207b46b18bdb83fcc2fe",
+    "original_artifact_sha256": "3af1b018dd843696fc46893229f9403d70f354f4fbf26273d0b500a5359ac774",
+    "published_proof_identical_to_original": true,
+    "historical_upstream_commit": "d1401976e8c59c6341cd0eceb425d5180092e176",
+    "upstream_304_source_unchanged_since_historical_pin": true,
+    "source_snapshot": "verification/304/Upstream.lean",
+    "upstream_module_wfail_build_exit_code": 0,
+    "external_proof_lean_exit_code": 0,
+    "external_proof_warnings": [
+      "missing module docstring",
+      "deprecated push_neg",
+      "duplicated namespace components"
+    ]
   }
 }

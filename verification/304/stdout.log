@@ -1,0 +1,27 @@
+Building Challenge
+Challenge.lean:4:0: warning: declaration uses `sorry`
+Challenge.lean:10:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Exporting #[erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Challenge
+Building Solution
+Solution.lean:36:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Solution.lean:197:8: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solution.lean:293:8: warning: The namespaces `erdos_304` and `variants` are duplicated in the declaration `erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950`.
+
+Note: This linter can be disabled with `set_option linter.dupNamespace false`
+'erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Exporting #[erdos_304.variants.lower_1950_candidate.erdos_304.variants.lower_1950, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
