@@ -1,0 +1,12 @@
+Building Challenge
+Challenge.lean:81:8: warning: declaration uses `sorry`
+Challenge.lean:91:8: warning: declaration uses `sorry`
+Challenge.lean:102:8: warning: declaration uses `sorry`
+Exporting #[PublicationRegression769.no_cutoff_zero, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Challenge
+Building Solution
+Solution.lean:81:8: warning: declaration uses `sorry`
+Solution.lean:91:8: warning: declaration uses `sorry`
+Exporting #[PublicationRegression769.no_cutoff_zero, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

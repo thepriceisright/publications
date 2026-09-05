@@ -1,0 +1,102 @@
+{
+  "upstream_repository": "https://github.com/google-deepmind/formal-conjectures",
+  "upstream_commit": "8323e878b83fcd7f4a448256069352a265460d75",
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "dependency_manifest_sha256": "c8ffc0d59f492007162fe54c68396e4b9f2f305fcf69210a7fbaf0b18fcd8cd9",
+  "comparator_revision": "3927ad383f208ae977c340a91c48ac9b497d2097",
+  "exporter_revision": "15f6055e299ad5b89345e533cc2192f4cc00f659",
+  "verification_scope": "867 lower-bound proof and 769 no_cutoff_zero regression; repaired 769 conjecture remains unproved",
+  "validation_method": "Independent challenge export, exact statement comparison and Lean builtin kernel replay; trusted third-party dependency caches reused; no independent kernel implementation",
+  "human_mathematical_review": "not claimed",
+  "artifacts": {
+    "867": {
+      "upstream_file_sha256": "205084745559fd5b2d9c3ade05420edc188f99405f3aa61f37aa6deb3c67dcf8",
+      "patched_file_sha256": "784f7a77001f1513b0d62986904cda80f4f75325afdcbeaf60fa5101e8eda8d7",
+      "patch_sha256": "70b46b9e8392ee3026771edd789e32d395e45b1c94af37f4c8c8c9aa33eb1fd2",
+      "target_file": "FormalConjectures/ErdosProblems/867.lean"
+    },
+    "769": {
+      "upstream_file_sha256": "1b1c9b302900300187730c32beb2d053465f87ea8f7e34b80031ccc9e9c992d8",
+      "patched_file_sha256": "fdf54b0b13b8cc729583d35949f4e31254e0f9dbef4ba95bfeb30ed1f729b2b0",
+      "patch_sha256": "9869ccb0814c954a916b8a7a2cd1f848a61c4f1e7275777b90c7b3bee5cfe562",
+      "target_file": "FormalConjectures/ErdosProblems/769.lean"
+    }
+  },
+  "checks": {
+    "867": {
+      "verified": true,
+      "exit_code": 0,
+      "theorem_names": [
+        "Erdos867.erdos_867.variants.lower_bound"
+      ],
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "challenge_sha256": "205084745559fd5b2d9c3ade05420edc188f99405f3aa61f37aa6deb3c67dcf8",
+      "solution_sha256": "784f7a77001f1513b0d62986904cda80f4f75325afdcbeaf60fa5101e8eda8d7",
+      "comparator_binary_sha256": "7ceecbe6643d85e6e22f97153451d406feadc56bd6c3d725310fabb4789a8d86",
+      "exporter_binary_sha256": "935d83081c9c5c2ff04abfb80f323531195b367c6bc42b45b805e50b550ceb33",
+      "sandbox_source_sha256": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253"
+    },
+    "769": {
+      "verified": true,
+      "exit_code": 0,
+      "theorem_names": [
+        "PublicationRegression769.no_cutoff_zero"
+      ],
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "challenge_sha256": "a755814d0e13d8cc8d7ea372fd8ba2ed3076b039b35fc0e5670e5b7a6701f2e3",
+      "solution_sha256": "6c61c6ed2b8a4a1d1046884fc04ea697cc76a90de0ac187d06cd74a739ef3659",
+      "comparator_binary_sha256": "7ceecbe6643d85e6e22f97153451d406feadc56bd6c3d725310fabb4789a8d86",
+      "exporter_binary_sha256": "935d83081c9c5c2ff04abfb80f323531195b367c6bc42b45b805e50b550ceb33",
+      "sandbox_source_sha256": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253"
+    }
+  },
+  "files": {
+    ".gitattributes": "2453d056ac016dc78128e38ccd41757164b51cc404872e3e7b3bf9ded7c58080",
+    ".gitignore": "0a58d0607f6a4bc18ae135e2d18ced14eaef4ea5ef42dc2a81f72169d682c583",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "f788cf0bbc0327c79d071028855758e763b8ed560a7abf45998f9b4e2e950adb",
+    "README.md": "df36bd65257004c50f7cdf35a091e29e67408ec34ac41e9968a8180ecd16d800",
+    "erdos/769/769.lean": "fdf54b0b13b8cc729583d35949f4e31254e0f9dbef4ba95bfeb30ed1f729b2b0",
+    "erdos/769/769.patch": "9869ccb0814c954a916b8a7a2cd1f848a61c4f1e7275777b90c7b3bee5cfe562",
+    "erdos/769/README.md": "93f2a75caba038ee8bdf877b0fa3eadd87995348acadbf132616826c119e7874",
+    "erdos/769/Regression769.lean": "f80e3d8ac08ffeb2644846c0e0263ceab6fe45606a540c873bf126c5fa6ac937",
+    "erdos/867/867.lean": "784f7a77001f1513b0d62986904cda80f4f75325afdcbeaf60fa5101e8eda8d7",
+    "erdos/867/867.patch": "70b46b9e8392ee3026771edd789e32d395e45b1c94af37f4c8c8c9aa33eb1fd2",
+    "erdos/867/README.md": "ff92e76778c14e326990e587084a25a2612ca487dfe2fe0cc6745a4273d07e5d",
+    "scripts/build.py": "28934b852e75ad20f6c3762534e1956216ccd40db52ddc8e3dee024e6d9c37df",
+    "scripts/replay.py": "14f47132124f5a70d4a44669af693a489f05d507f5d0fb56e3bd626cba6e5ee7",
+    "scripts/sandbox.py": "c4e387b39e585c05a84917e6687af774c963d0eb8c095c81af72cdefdad63253",
+    "verification/769/Challenge.lean": "a755814d0e13d8cc8d7ea372fd8ba2ed3076b039b35fc0e5670e5b7a6701f2e3",
+    "verification/769/Solution.lean": "6c61c6ed2b8a4a1d1046884fc04ea697cc76a90de0ac187d06cd74a739ef3659",
+    "verification/769/config.json": "ae3dea155aea10aab1ca67c44c68e8aad339f655b5b42c174aa7b24bd429fff1",
+    "verification/769/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/769/stdout.log": "a8d514670bebdd74de56c693554d27014c6e32b2478dcc05f792008a04350f5d",
+    "verification/867/Challenge.lean": "205084745559fd5b2d9c3ade05420edc188f99405f3aa61f37aa6deb3c67dcf8",
+    "verification/867/Solution.lean": "784f7a77001f1513b0d62986904cda80f4f75325afdcbeaf60fa5101e8eda8d7",
+    "verification/867/config.json": "a3ff9f2917af217f893de9d6839c44d7ac7c0607bb10df83b5ed0dad1f7414a1",
+    "verification/867/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verification/867/stdout.log": "7916aff446fd8a6f710fc23183180c5b9156bf5810ac612e01d6d5ae5e280d30",
+    "verification/README.md": "48d234d40a9798eebff1a07041e727219de683783a1616b472c9cd832d333a4c",
+    "verification/comparator-lake-manifest.json": "ea674a67ec934845dd5769ce8744fc27f076fb9b2c3149b0efc005a1feb6d518"
+  },
+  "comparator_toolchain_override": "leanprover/lean4:v4.33.1",
+  "comparator_manifest_sha256": "ea674a67ec934845dd5769ce8744fc27f076fb9b2c3149b0efc005a1feb6d518",
+  "release_reproduction": {
+    "date_utc": "2026-09-05",
+    "targeted_build": "lake --wfail build on both patched problem modules and Regression769",
+    "build_exit_code": 0,
+    "public_replay_script_verified_targets": [
+      "Erdos867.erdos_867.variants.lower_bound",
+      "PublicationRegression769.no_cutoff_zero"
+    ],
+    "cache_policy": "Third-party dependency caches reused; current upstream corpus utility sources rebuilt"
+  }
+}
